@@ -5,7 +5,7 @@ import { serialize } from "cookie";
 
 
 export async function POST(request: Request) {
-  const { body } = await request.json();
+  const body  = await request.json();
   const JWT_SECRET = process.env.JWT_SECRET || "default";
 
   

@@ -1,15 +1,26 @@
+"use client";
 
-
-
+import { useRouter } from 'next/navigation';
 
 export default function DashboardPage() {
-    const user = { id: "1", name: "John Doe", email: "john.doe@example.com" }; 
+    const router = useRouter();
+    const handleClick = async () => {
+        const res = await fetch('/api/logout', {    
+            method: 'POST',
+        });
+
+        if (res.ok) {
+            router.push('/login');
+        } else {
+            alert('Logout failed');
+        }
+    }
+
     return (
         <div>
             <h1>Dashboard</h1>
             <p>Welcome to the dashboard!</p>
-            <h2>{user.name}</h2>
-            <p>{user.email}</p>
+            <button onClick={handleClick}>Logout</button>
         </div>
     );
 }

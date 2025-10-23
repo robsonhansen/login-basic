@@ -4,32 +4,49 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 2rem;
   background-color: #e9fcffff;
 }
-
-.main {
+.page main {
   background: white;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  height: 300px;
-  width: 90%;
-
+}
+.page h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.page p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+.page form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2.4rem;
+
+  gap: 1rem;
+}
+.page input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
-.button {
-  padding: 0.8rem 1.2rem;
+.page button {
+  padding: 0.75rem;
   font-size: 1rem;
-  color: white;
   background-color: #0070f3;
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+.page button:hover {
+  background-color: #005bb5;
 }
